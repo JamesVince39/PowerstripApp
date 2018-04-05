@@ -67,6 +67,27 @@ public class MainActivity extends AppCompatActivity implements BLEManager {
         });
 
         mPeripheral = new BLEPeripheral(this, DEVICE_ID);
+
+        Button button1 = (Button) findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this,
+                        Outlet1Activity.class);
+                startActivity(myIntent);
+            }
+        });
+
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this,
+                        Outlet2Activity.class);
+                startActivity(myIntent);
+            }
+        });
+
     }
 
     @Override
@@ -159,5 +180,8 @@ public class MainActivity extends AppCompatActivity implements BLEManager {
             // permissions this app might request
         }
     }
+
+
+
 }
 
