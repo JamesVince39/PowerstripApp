@@ -2,7 +2,8 @@ package com.example.james.powerstripapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
+import java.util.Timer;
+import java.util.TimerTask;
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
@@ -35,6 +36,10 @@ public class MainActivity extends AppCompatActivity implements BLEManager {
     private TextView mLogger;
     private Button mSendData;
     private Button mReadButton;
+    private Button btnOutlet1;
+
+
+    private String dataString = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements BLEManager {
             Toast.makeText(this, R.string.ble_not_supported, Toast.LENGTH_SHORT).show();
             finish();
         }
+
+
 
         mInput = (EditText) findViewById(R.id.input);
         mLogger = (TextView) findViewById(R.id.log);
@@ -66,15 +73,22 @@ public class MainActivity extends AppCompatActivity implements BLEManager {
             }
         });
 
+
+
         mPeripheral = new BLEPeripheral(this, DEVICE_ID);
 
-        Button button1 = (Button) findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
+        btnOutlet1 = (Button) findViewById(R.id.button1);
+        btnOutlet1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(MainActivity.this,
-                        Outlet1Activity.class);
-                startActivity(myIntent);
+
+                //mPeripheral.writeCharacteristic(CHARACTERISTIC_ID, "Read");
+                //dataString = mPeripheral.getDataString(CHARACTERISTIC_ID);
+                //txtVoltage1.setText(dataString);
+
+
+
+
             }
         });
 

@@ -5,4 +5,10 @@
     <string name="read">Read</string>
     <string name="button1Text">Outlet 1 (CPU)</string>
     <string name="button2Text">Outlet 2 (Phone)</string>
+    <string name="txtVoltageText">Voltage: 12.01V </string>
+    <string name="txtCurrentText">Current: 500mA </string>
+    <string name="txtPowerText">Power: 6.0W </string>
+    <string name="outlet2Title">Outlet 2</string>
+    <string name="btnRefreshText">Refresh</string>
+
 </resources>

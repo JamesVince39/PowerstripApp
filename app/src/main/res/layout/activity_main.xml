@@ -48,15 +48,15 @@
         android:maxLines="5000"
         android:scrollbars="vertical" />
 
-    <Button
+    hellohegrwrg<Button
         android:id="@+id/button1"
         android:layout_width="100dp"
         android:layout_height="75dp"
+
         android:layout_below="@+id/log"
 
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:text="@string/button1Text"/>
+        android:layout_marginTop="16dp"
+        android:text="@string/button1Text" />
 
     <Button
         android:id="@+id/button2"
@@ -65,7 +65,25 @@
 
         android:layout_alignStart="@+id/button1"
         android:layout_below="@+id/button1"
-        android:layout_marginTop="25dp"
-        android:text="@string/button2Text"
-        />
+        android:layout_marginTop="20dp"
+        android:text="@string/button2Text" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+
+        android:layout_marginTop="14dp"
+        android:text="OUTLET 3" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button3"
+        android:layout_below="@+id/button3"
+        android:layout_marginTop="19dp"
+        android:text="OUTLET 4" />
+
 </RelativeLayout>

@@ -9,4 +9,75 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.james.Powerstripapp">
+
+    <TextView
+        android:id="@+id/txtVoltage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtTitle"
+        android:layout_marginTop="53dp"
+        android:text="@string/txtVoltageText"
+        android:textColor="@color/labelTextColor" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/outlet2Title"
+        android:textColor="@color/labelTextColor"
+        android:textSize="30dp"
+
+        />
+
+    <TextView
+        android:id="@+id/txtCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtVoltage"
+        android:layout_below="@+id/txtVoltage"
+        android:layout_marginTop="24dp"
+        android:text="@string/txtCurrentText"
+        android:textColor="@color/labelTextColor"
+        />
+
+    <TextView
+        android:id="@+id/txtPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtCurrent"
+        android:layout_below="@+id/txtCurrent"
+        android:layout_marginTop="31dp"
+        android:text="@string/txtPowerText"
+        android:textColor="@color/labelTextColor"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txtPower"
+        android:text="@string/btnRefreshText" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Auto-Refresh" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/txtPower"
+
+        ></com.github.mikephil.charting.charts.LineChart>
+
+
 </RelativeLayout>

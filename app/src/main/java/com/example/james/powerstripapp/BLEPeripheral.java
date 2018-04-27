@@ -208,4 +208,13 @@ public class BLEPeripheral {
         if (characteristic == null) return;
         mBluetoothGatt.readCharacteristic(characteristic);
     }
+
+    public String getDataString(String characteristicId){
+        BluetoothGattCharacteristic characteristic = findCharacteristicById(characteristicId);
+        if (characteristic == null) return null;
+        mBluetoothGatt.readCharacteristic(characteristic);
+        String dataString = new String(characteristic.getValue());
+        return dataString;
+    }
+
 }
